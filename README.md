@@ -4,7 +4,7 @@ Proyek *computer vision* *real-time* yang dibangun menggunakan Python, OpenCV, d
 
 ---
 
-## 🚀 Fitur Utama
+## Fitur
 
 * **Deteksi Real-Time:** Didukung oleh MediaPipe Hands dan Face Mesh untuk pelacakan titik wajah dan tangan yang cepat serta akurat.
 * **Pengenalan Gestur Tangan:** 
@@ -22,7 +22,7 @@ Proyek *computer vision* *real-time* yang dibangun menggunakan Python, OpenCV, d
 
 ---
 
-## 🛠️ Kebutuhan Sistem & Teknologi
+## Kebutuhan Sistem & Teknologi
 
 * **Python** (Direkomendasikan: versi `3.11` atau `3.12`)
 * **OpenCV** (`cv2`)
@@ -31,7 +31,7 @@ Proyek *computer vision* *real-time* yang dibangun menggunakan Python, OpenCV, d
 
 ---
 
-## 📦 Instalasi & Cara Menjalankan
+## Instalasi & Cara Menjalankan
 
 1. **Clone repository ini:**
    ```bash
