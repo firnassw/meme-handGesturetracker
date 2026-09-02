@@ -90,7 +90,6 @@ def main():
     is_playing = False
     history_x = deque(maxlen=5) 
     
-    # Timer pengganti toggle
     kucing_timer = 0           
 
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
@@ -151,7 +150,6 @@ def main():
                 tangan.append((jari, lm))
                 info_tangan.append(("Kiri" if kiri else "Kanan", jari))
 
-        # --- SENSOR GERAK OTOMATIS TUTUP ---
         if len(tangan) >= 1:
             jari_m, lm_m = tangan[0] 
             history_x.append(lm_m[8].x) 
@@ -159,26 +157,22 @@ def main():
             if len(history_x) == 5:
                 jarak_gerak = history_x[-1] - history_x[0] 
                 
-                # SENSITIVITAS GERAK DIPERBAIKI: Turun drastis dari 0.1 menjadi 0.02
-                # Asalkan tanganmu bergeser sedikit saja, dianggap masih bergerak
+               
                 if abs(jarak_gerak) > 0.02 and sum(jari_m) >= 4: 
-                    kucing_timer = 25  # Timer diperpanjang sedikit agar tidak mati saat tangan ganti arah ayunan
+                    kucing_timer = 25 
 
-        # Kicau Mania menyala selama timer berisi angka. Jika tangan diam total, timer habis = mati.
         if kucing_timer > 0:
             mode_kucing = True
             kucing_timer -= 1
         else:
             mode_kucing = False
 
-        # Kicau Mania menyala selama timer berisi angka. Jika kamu diam, timer habis = mati.
         if kucing_timer > 0:
             mode_kucing = True
             kucing_timer -= 1
         else:
             mode_kucing = False
 
-        # --- KONTROL MUSIK & JENDELA POP-UP ---
         if mode_kucing and not is_playing:
             try: pygame.mixer.music.play(-1)
             except: pass
@@ -191,7 +185,6 @@ def main():
             try: cv2.destroyWindow("kicau-mania.mp4") 
             except: pass
 
-        # --- TAMPILAN BERDASARKAN MODE ---
         if mode_kucing:
             ret_cat, cat_frame = cat_video.read()
             if not ret_cat:
