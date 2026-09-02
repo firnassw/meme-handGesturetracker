@@ -1,4 +1,4 @@
-# 🐵 Detektor Meme Berbasis Gestur & Ekspresi AI + Kicau Mania Mode
+# Detektor Gambar dan Video Berbasis Gestur & Ekspresi AI
 
 Proyek *computer vision* *real-time* yang dibangun menggunakan Python, OpenCV, MediaPipe, dan Pygame untuk mendeteksi gestur tangan serta ekspresi wajah guna mengganti gambar meme di layar secara dinamis, lengkap dengan fitur interaktif **Kicau Mania** (*cat dance* & musik) berbasis sensor gerak.
 
